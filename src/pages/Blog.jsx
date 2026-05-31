@@ -221,7 +221,7 @@ function Blog() {
                     backgroundColor: 'var(--bg)',
                     color: 'var(--text)',
                 }}
-            >
+             >
                 <Box sx={{ mb: 5, textAlign: 'center' }}>
                     <Typography variant="h3" fontWeight={800} gutterBottom>
                         SEJA BEM-VINDO!
