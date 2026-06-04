@@ -1,43 +1,56 @@
-import * as React from 'react';
+import React from 'react';
 import Navbar from '../components/Navbar';
-import { Button } from '@mui/material';
+import Contatos from '../components/Contatos';
+import EmailForm from '../components/EmailForm';
+
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-function Contato() {
+export default function Contato() {
    return (
       <>
          <Navbar />
-         <Box>
-            <Box
-   sx={{
-      textAlign: 'center',
-      mb: 8,
-   }}
->
-   <Typography
-      variant="h2"
-      fontWeight={700}
-      color="var(--text)"
-   >
-      Fale Conosco!
-   </Typography>
 
-   <Typography
-      variant="h6"
-      sx={{
-         color: 'var(--text-secondary)',
-         mt: 2,
-      }}
-   >
-      Entre em contato conosco.
-   </Typography>
-</Box>
+         {/* Cabeçalho */}
+         <Box
+            sx={{
+               py: 8,
+               textAlign: 'center',
+            }}
+         >
 
-          
-          </Box>
+            <Typography variant="h3" fontWeight="bold"
+               sx={{
+                  marginTop: 2,
+               }}
+            >
+               Fale conosco
+            </Typography>
+
+
+         </Box>
+
+         {/* Conteúdo principal */}
+         <Box
+            sx={{
+               width: '100%',
+               maxWidth: '1600px',
+               mx: 'auto',
+               px: 3,
+               py: 6,
+               display: 'grid',
+               gridTemplateColumns: {
+                  xs: '1fr',
+                  md: '1fr 1fr',
+               },
+               gap: 30,
+               alignItems: 'start',
+            }}
+         >
+            <Contatos />
+
+            <EmailForm />
+         </Box>
       </>
    );
 }
-
-export default Contato;
